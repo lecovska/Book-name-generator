@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.result {
+  width: 100%;
+  height: 66%;
+  position: relative;  
+  font-size: 25px;
+}
+
+.insult {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+}
+
+.input {
+  height: 33%;
+  
+}
+
+.radio-btn{
+  display: flex;
+  justify-content: space-around;
+  padding: 10%;
+}
