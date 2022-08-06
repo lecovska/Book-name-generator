@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
 
-  const [displayedInsult, setDisplayedInsult] = useState("Ime knjige");
+  const [displayedInsult, setDisplayedInsult] = useState("");
 
   const [nameSurname, setNameSurname] = useState("");
 
@@ -14,25 +14,28 @@ function App() {
     setNameSurname(event.target.value);
   }
 
-  const adjectiveInsultFemale = ["očerupana", "narogušena", "pederska", "smrdljiva", "smežurana", "degenerisana", "izdajnička", "korumpirana", "pokvarena", "retardirana", "izlapela"];
+  const adjectiveInsultFemale = ["Očerupana", "Narogušena", "Pederska", "Smrdljiva", "Smežurana", "Degenerisana", "Izdajnička", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
   const adjectiveNationalityFemale = ["haška", "ustaška", "engleska", "američka", "CIA-ina", "vašingtonska", "katolička", "satanistička", "hrvatska"];
   const nounInsultFemale = ["ćurka", "krmača", "pička", "kurva", "mačkica", "narkomanka", "izdajnica", "gnjida", "alkoholičarka", "karakondžula", "veleizdajnica", "bitanga", "večtica"];
 
-  const adjectiveInsultMale = ["očerupani", "narogušen", "pederski", "smrdljivi", "degenerisani", "smežurani", "izdajnički", "korumpirani", "pokvareni", "retardirani", "izlapeli"];
+  const adjectiveInsultMale = ["Očerupani", "Narogušen", "Pederski", "Smrdljivi", "Degenerisani", "Smežurani", "Izdajnički", "Korumpirani", "Pokvareni", "Retardirani", "Izlapeli"];
   const adjectiveNationalityMale = ["haški", "ustaški", "engleski", "kurvinski", "američki", "CIA-in", "vašingtonski", "katolički", "satanistički", "hrvatski"];
   const nounInsultMale = ["ćuran", "krmak", "govnar", "majmun", "isprdak", "picopevac", "pacov", "narkoman", "špijun", "izdajnik", "robijaš", "babun", "zločinac", "seksualni manijak", "alkoholičar", "veleizdajnik"];
 
-  const adjectiveInsultFemaleForMale = ["očerupana", "narogušena", "pederska", "smrdljiva", "degenerisana", "izdajnička", "korumpirana", "pokvarena", "retardirana", "izlapela"];
+  const adjectiveInsultFemaleForMale = ["Očerupana", "Narogušena", "Pederska", "Smrdljiva","Smežurana", "Degenerisana", "Izdajnička", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
   const adjectiveNationalityFemaleForMale = ["haška", "ustaška", "engleska", "američka", "CIA-ina", "vašingtonska", "katolička", "satanistička", "hrvatska"];
   const nounInsultFemaleForMale = ["ćurka", "pudlica", "pička", "mačkica", "pederčina", "gnjida", "veleizdajnica", "bitanga"];
 
-  const adjectiveInsultMaleForFemale = ["očerupani", "narogušen", "pederski", "smrdljivi", "degenerisani", "smežurani", "izdajnički", "korumpirani", "pokvareni", "retardirani", "izlapeli"];
+  const adjectiveInsultMaleForFemale = ["Očerupani", "Narogušen", "Pederski", "Smrdljivi", "Degenerisani", "Smežurani", "Izdajnički", "Korumpirani", "Pokvareni", "Retardirani", "Izlapeli"];
   const adjectiveNationalityMaleForFemale = ["haški", "ustaški", "engleski", "američki", "CIA-in", "vašingtonski", "katolički", "satanistički", "hrvatski"];
   const nounInsultMaleForFemale = ["govnar", "zlikovac", "majmun", "isprdak", "pacov", "narkoman", "špijun", "izdajnik", "robijaš", "babun", "zločinac", "seksualni manijak", "alkoholičar", "veleizdajnik"];
 
 
 
   function generate() {
+    if(!nameSurname){
+      return;
+    }
     let insult = "";
 
     if (selectedGender === "male") {
@@ -76,7 +79,7 @@ function App() {
 
 
     }
-    setDisplayedInsult(insult);
+    setDisplayedInsult(`"${insult}"`);
   }
 
 
@@ -88,19 +91,20 @@ function App() {
   return (
     <div className="app">
       <div className='result'>
-        <div className="insult">"{displayedInsult}"</div>
+        <div className="insult">{displayedInsult}</div>
       </div>
       <div className='input'>
 
         <input type="text" placeholder='Upiši ime i prezime' value={nameSurname} onChange={changeHandler}></input>
         <button onClick={generate}>Click</button>
+        </div>
         <div className="radio-btn">
           <label>Musko <input type="radio" name="gender" value="male" checked={selectedGender === "male"} onChange={gender}></input> </label>
           <label>Žensko <input type="radio" name="gender" value="female" checked={selectedGender === "female"} onChange={gender}></input>  </label>
         </div>
-
+        
       </div>
-    </div>
+  
   );
 }
 

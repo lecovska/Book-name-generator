@@ -27,12 +27,26 @@
 }
 
 .input {
-  height: 33%;
-  
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+
 }
 
-.radio-btn{
+
+
+button{
+  margin-left: 5px;
+}
+
+.radio-btn{ 
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  padding: 10%;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+label{
+  margin-right: 20px;
 }
