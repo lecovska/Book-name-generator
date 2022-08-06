@@ -99,7 +99,7 @@ function App() {
         <button onClick={generate}>Click</button>
         </div>
         <div className="radio-btn">
-          <label>Musko <input type="radio" name="gender" value="male" checked={selectedGender === "male"} onChange={gender}></input> </label>
+          <label>Muško <input type="radio" name="gender" value="male" checked={selectedGender === "male"} onChange={gender}></input> </label>
           <label>Žensko <input type="radio" name="gender" value="female" checked={selectedGender === "female"} onChange={gender}></input>  </label>
         </div>
         
