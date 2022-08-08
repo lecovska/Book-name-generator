@@ -13,15 +13,18 @@ function App() {
 
   const [selectedGender, setSelectedGender] = useState("male");
 
-  const images=[imageFisrt, imageSec];
-  
-  const [selectedImage, setSelectedImage]= useState ("")
+  const images = [imageFisrt, imageSec];
 
-  function randomImage(){
-    setSelectedImage(images[Math.floor(Math.random() * images.length)]);
-    
+  const [selectedImage, setSelectedImage] = useState("")
+
+  function randomNum(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
   }
-  
+
+  function randomImage() {
+    setSelectedImage(randomNum(images));
+  }
+
 
   function changeHandler(event) {
     setNameSurname(event.target.value);
@@ -35,7 +38,7 @@ function App() {
   const adjectiveNationalityMale = ["haški", "ustaški", "engleski", "kurvinski", "američki", "CIA-in", "vašingtonski", "katolički", "satanistički", "hrvatski"];
   const nounInsultMale = ["ćuran", "krmak", "govnar", "majmun", "isprdak", "picopevac", "pacov", "narkoman", "špijun", "izdajnik", "robijaš", "babun", "zločinac", "seksualni manijak", "alkoholičar"];
 
-  const adjectiveInsultFemaleForMale = ["Očerupana", "Narogušena", "Pederska", "Smrdljiva","Smežurana", "Degenerisana", "Izdajnička", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
+  const adjectiveInsultFemaleForMale = ["Očerupana", "Narogušena", "Pederska", "Smrdljiva", "Smežurana", "Degenerisana", "Izdajnička", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
   const adjectiveNationalityFemaleForMale = ["haška", "ustaška", "engleska", "američka", "CIA-ina", "vašingtonska", "katolička", "satanistička", "hrvatska"];
   const nounInsultFemaleForMale = ["ćurka", "pudlica", "pička", "mačkica", "pederčina", "gnjida", "bitanga"];
 
@@ -46,7 +49,7 @@ function App() {
 
 
   function generate() {
-    if(!nameSurname){
+    if (!nameSurname) {
       return;
     }
     let insult = "";
@@ -106,10 +109,11 @@ function App() {
     <div className="app">
       {!selectedImage ? <img className="openBook" src={book} alt=""></img> : <img className="bookFirstPage" src={selectedImage} alt=""></img>}
       <div className='result'>
-        
+
         <div className="insult">{displayedInsult}</div>
       </div>
       <div className='input'>
+
 
         <input className="name" type="text" placeholder='Upiši ime i prezime' value={nameSurname} onChange={changeHandler}></input>
         
@@ -120,8 +124,10 @@ function App() {
          <div className="radio"> <label> Žensko <input className="dot" type="radio" name="gender" value="female" checked={selectedGender === "female"} onChange={gender} ></input></label> </div>
         </div>
         
-      </div>
-  
+
+
+    </div>
+
   );
 }
 
