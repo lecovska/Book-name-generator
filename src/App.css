@@ -17,15 +17,15 @@
   height: 66%;
   position: relative;
   font-size: 25px;
-  color:rgb(197, 167, 85);
+  color: rgb(197, 167, 85);
 }
 
 .insult {
-  width: 18%;
+  width: 15%;
   position: absolute;
   text-align: center;
   top: 40%;
-  left: 41%;
+  left: 42.5%;
 }
 
 .input {
@@ -33,19 +33,21 @@
   height: 5%;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  
 }
 
-input {
+.name {
   width: 12%;
   outline-style: none;
   border: none;
 
   border-bottom: 1px solid rgb(206, 194, 194);
   height: 100%;
-  padding-left: 10px;
-  margin-right: 20px;
+  /* padding-left: 10px;
+  margin-right: 20px; */
   box-shadow: 0 0.7em 1.5em -0.5em #a7801483;
-}
+} */
 
 button {
   /* width: 3%;
@@ -71,31 +73,31 @@ button {
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 3%; */
-  box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-	background-color:#ededed;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#777777;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #777777;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
   width: 5%;
 }
 
 button:hover {
-  background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-	background-color:#dfdfdf;
+  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color: #dfdfdf;
 }
 
 button:active {
-  position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .radio-btn {
@@ -116,19 +118,185 @@ label {
   height: 120%;
 }
 
-img{
+img {
   width: 20%;
   height: 55%;
   position: absolute;
   left: 40%;
   top: 8%;
+  
 }
 
-.openBook{
+.openBook {
   width: 40%;
   height: 50%;
   position: absolute;
   left: 30%;
   z-index: -2;
   text-align: center;
+}
+
+.bookFirstPage{
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+}
+
+@media screen and (max-width: 660px) {
+
+  .app {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 100vh; */
+  }
+
+  .result {
+    width: 100%;
+    height: 66%;
+    position: relative;
+    font-size: 25px;
+    color: rgb(197, 167, 85);
+    
+  }
+
+  .insult {
+    width: 60%;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 20%;
+  }
+
+  .input {
+    padding-top: 50px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+  .name {
+    width: 70%;
+    outline-style: none;
+    border: none;
+    border-bottom: 1px solid rgb(206, 194, 194);
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0.7em 1.5em -0.5em #a7801483;
+  }
+
+  button {
+    /* width: 3%;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: red; */
+    /* display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white; */
+    /* background: #ad5389;
+    background: linear-gradient(0deg, rgba(212, 73, 63, 0.884) 0%, rgb(240, 143, 143) 100%); */
+    /* background: grey;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #a78014b6;
+    letter-spacing: 0.05em; */
+    /* border-radius: 50%; */
+    /* cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 3%; */
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color: #ededed;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #777777;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  button:hover {
+    background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    background-color: #dfdfdf;
+  }
+
+  button:active {
+    position: relative;
+    top: 1px;
+  }
+
+  .radio-btn input {
+    /* width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin: 0; */
+    /* margin-top: 10px;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    text-align: center; */
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+  }
+
+
+
+  label {
+    text-align: right;
+  }
+
+  .radio {
+    background-color: rgba(255, 255, 255, 0.363);
+    background-color: transparent;
+    height: 100%;
+  }
+
+
+  img {
+    width: 70%;
+    height: 55%;
+    position: absolute;
+    left: 15%;
+    top: 8%;
+  }
+
+  .openBook {
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    left: 13%;
+    z-index: -2;
+    text-align: center;
+  }
+
+  .bookFirstPage{
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
+  }
+
+
 }

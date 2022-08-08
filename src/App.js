@@ -104,20 +104,20 @@ function App() {
 
   return (
     <div className="app">
-      {!selectedImage ? <img className="openBook" src={book} alt=""></img> : <img src={selectedImage} alt=""></img>}
+      {!selectedImage ? <img className="openBook" src={book} alt=""></img> : <img className="bookFirstPage" src={selectedImage} alt=""></img>}
       <div className='result'>
         
         <div className="insult">{displayedInsult}</div>
       </div>
       <div className='input'>
 
-        <input type="text" placeholder='Upiši ime i prezime' value={nameSurname} onChange={changeHandler}></input>
+        <input className="name" type="text" placeholder='Upiši ime i prezime' value={nameSurname} onChange={changeHandler}></input>
         
         <button onClick={generate} >Click</button>
         </div>
         <div className="radio-btn">
-         <div className="radio"> <label>Muško <input  type="radio" name="gender" value="male" checked={selectedGender === "male"} onChange={gender} ></input> </label></div>
-         <div className="radio">  <label>Žensko <input type="radio" name="gender" value="female" checked={selectedGender === "female"} onChange={gender} ></input>  </label></div>
+         <div className="radio"> <label>Muško <input className="dot"  type="radio" name="gender" value="male" checked={selectedGender === "male"} onChange={gender} ></input></label> </div>
+         <div className="radio"> <label> Žensko <input className="dot" type="radio" name="gender" value="female" checked={selectedGender === "female"} onChange={gender} ></input></label> </div>
         </div>
         
       </div>
