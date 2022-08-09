@@ -130,7 +130,7 @@ function App() {
         <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v14.0" nonce="3A47jBdN"></script>
         
-        <iframe title="myFrame" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbook-name-generator.vercel.app%2F&layout=button_count&size=large&width=88&height=28&appId" width="100" height="30" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        <iframe title="Koja si Šešeljeva knjiga" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbook-name-generator.vercel.app%2F&layout=button_count&size=large&width=88&height=28&appId" width="100" height="30" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         
     </div>
 
