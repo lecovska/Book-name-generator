@@ -30,21 +30,21 @@ function App() {
     setNameSurname(event.target.value);
   }
 
-  const adjectiveInsultFemale = ["Očerupana", "Narogušena", "Pederska", "Smrdljiva", "Smežurana", "Degenerisana", "Izdajnička", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
-  const adjectiveNationalityFemale = ["haška", "ustaška", "engleska", "američka", "CIA-ina", "vašingtonska", "katolička", "satanistička", "hrvatska"];
-  const nounInsultFemale = ["ćurka", "krmača", "pička", "kurva", "mačkica", "narkomanka", "izdajnica", "gnjida", "alkoholičarka", "karakondžula", "bitanga", "večtica"];
+  const adjectiveInsultFemale = ["Oчerupana", "Naroguшena", "Pederska", "Smrdљiva", "Смежурана", "Degenerisana", "Издајничка", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
+  const adjectiveNationalityFemale = ["haшka", "ustaшka", "engleska", "ameriчka", "CIA-ina", "vaшingtonska", "katoliчka", "satanistiчka", "hrvatska"];
+  const nounInsultFemale = ["ћurka", "krmaчa", "piчka", "kurva", "maчkica", "narkomanka", "izdajnica", "gњida", "alkoholiчarka", "karakonџula", "bitanga", "veшtica"];
 
-  const adjectiveInsultMale = ["Očerupani", "Narogušen", "Pederski", "Smrdljivi", "Degenerisani", "Smežurani", "Izdajnički", "Korumpirani", "Pokvareni", "Retardirani", "Izlapeli"];
-  const adjectiveNationalityMale = ["haški", "ustaški", "engleski", "kurvinski", "američki", "CIA-in", "vašingtonski", "katolički", "satanistički", "hrvatski"];
-  const nounInsultMale = ["ćuran", "krmak", "govnar", "majmun", "isprdak", "picopevac", "pacov", "narkoman", "špijun", "izdajnik", "robijaš", "babun", "zločinac", "seksualni manijak", "alkoholičar"];
+  const adjectiveInsultMale = ["Oчerupani", "Naroguшen", "Pederski", "Smrdљivi", "Degenerisani", "Smeжurani", "Izdajniчki", "Korumpirani", "Pokvareni", "Retardirani", "Izlapeli"];
+  const adjectiveNationalityMale = ["haшki", "ustaшki", "engleski", "kurvinski", "ameriчki", "CIA-in", "vaшingtonski", "katoliчki", "satanistiчki", "hrvatski"];
+  const nounInsultMale = ["ћuran", "krmak", "govnar", "majmun", "isprdak", "picopevac", "pacov", "narkoman", "шpijun", "izdajnik", "robijaш", "babun", "zloчinac", "seksualni manijak", "alkoholiчar"];
 
-  const adjectiveInsultFemaleForMale = ["Očerupana", "Narogušena", "Pederska", "Smrdljiva", "Smežurana", "Degenerisana", "Izdajnička", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
-  const adjectiveNationalityFemaleForMale = ["haška", "ustaška", "engleska", "američka", "CIA-ina", "vašingtonska", "katolička", "satanistička", "hrvatska"];
-  const nounInsultFemaleForMale = ["ćurka", "pudlica", "pička", "mačkica", "pederčina", "gnjida", "bitanga"];
+  const adjectiveInsultFemaleForMale = ["Oчerupana", "Naroguшena", "Pederska", "Smrdљiva", "Smeжurana", "Degenerisana", "Izdajniчka", "Korumpirana", "Pokvarena", "Retardirana", "Izlapela"];
+  const adjectiveNationalityFemaleForMale = ["haшka", "ustaшka", "engleska", "ameriчka", "CIA-ina", "vaшingtonska", "katoliчka", "satanistiчka", "hrvatska"];
+  const nounInsultFemaleForMale = ["ћurka", "pudlica", "piчka", "maчkica", "pederчina", "gњida", "bitanga"];
 
-  const adjectiveInsultMaleForFemale = ["Očerupani", "Narogušen", "Pederski", "Smrdljivi", "Degenerisani", "Smežurani", "Izdajnički", "Korumpirani", "Pokvareni", "Retardirani", "Izlapeli"];
-  const adjectiveNationalityMaleForFemale = ["haški", "ustaški", "engleski", "američki", "CIA-in", "vašingtonski", "katolički", "satanistički", "hrvatski"];
-  const nounInsultMaleForFemale = ["govnar", "zlikovac", "majmun", "isprdak", "pacov", "narkoman", "špijun", "izdajnik", "robijaš", "babun", "zločinac", "seksualni manijak", "alkoholičar"];
+  const adjectiveInsultMaleForFemale = ["Oчerupani", "Naroguшen", "Pederski", "Smrdљivi", "Degenerisani", "Smeжurani", "Izdajniчki", "Korumpirani", "Pokvareni", "Retardirani", "Izlapeli"];
+  const adjectiveNationalityMaleForFemale = ["haшki", "ustaшki", "engleski", "ameriчki", "CIA-in", "vaшingtonski", "katoliчki", "satanistiчki", "hrvatski"];
+  const nounInsultMaleForFemale = ["govnar", "zlikovac", "majmun", "isprdak", "pacov", "narkoman", "шpijun", "izdajnik", "robijaш", "babun", "zloчinac", "seksualni manijak", "alkoholiчar"];
 
 
 
@@ -107,6 +107,8 @@ function App() {
 
   return (
     <div className="app">
+      
+      <p id="title">by Teodora Lečovska</p>
       {!selectedImage ? <img className="openBook" src={book} alt=""></img> : <img className="bookFirstPage" src={selectedImage} alt=""></img>}
       <div className='result'>
 
@@ -124,8 +126,12 @@ function App() {
          <div className="radio"> <label> Žensko <input className="dot" type="radio" name="gender" value="female" checked={selectedGender === "female"} onChange={gender} ></input></label> </div>
         </div>
         
-
-
+        
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/sr_RS/sdk.js#xfbml=1&version=v14.0" nonce="3A47jBdN"></script>
+        
+        <iframe title="myFrame" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbook-name-generator.vercel.app%2F&layout=button_count&size=large&width=88&height=28&appId" width="100" height="30" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        
     </div>
 
   );
