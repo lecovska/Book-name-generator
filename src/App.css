@@ -159,7 +159,7 @@ box-shadow: 5px 5px 15px 5px #000000;
   color: #383737af;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:500px) {
 
   body{
     min-height: 600px;
@@ -183,12 +183,12 @@ box-shadow: 5px 5px 15px 5px #000000;
   }
 
   .insult {
-    width: 40%;
+    width: 45%;
     position: absolute;
     text-align: center;
-    top: 32%;
-    left: 32%;
-    font-size: 22px;
+    top: 34%;
+    left: 29%;
+    font-size: 15px;
   }
 
   .input {
