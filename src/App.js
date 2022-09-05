@@ -133,6 +133,7 @@ function App() {
         <iframe title="Koja si Šešeljeva knjiga" src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbook-name-generator.vercel.app%2F&layout=button_count&size=large&width=88&height=28&appId" width="100" height="30" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         <a id="twitterBtn" href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
+        <p className="note">ZA NAJBOLJI PRIKAZ KORISTITE ĆIRILICU</p>
     </div>
 
   );

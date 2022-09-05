@@ -28,7 +28,7 @@
   top: 38%;
   left: 42.5%;
   font-family: "Miroslav";
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 400;
   color: #c1b679;
 	letter-spacing: 1px;
@@ -40,8 +40,7 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  font-family: "Miroslav";
-  
+  font-family: "Miroslav"; 
 }
 
 #root {
@@ -60,7 +59,6 @@
   box-shadow: 0 0.7em 1.5em -0.5em #a7801483;
   background: transparent;
   font-size: 20px;
- 
 } 
 
 button {
@@ -101,7 +99,8 @@ button {
   padding: 6px 24px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #ffffff;
-  width: 5%;
+  width: 10%;
+  margin-left: 20px;
 }
 
 button:hover {
@@ -120,7 +119,6 @@ button:active {
   justify-content: center;
   margin-top: 2%;
   margin-bottom: 20px;
-    
 }
 
 label {
@@ -140,7 +138,6 @@ img {
   position: absolute;
   left: 40%;
   top: 8%;
-  
 }
 
 .openBook {
@@ -161,8 +158,9 @@ box-shadow: 5px 5px 15px 5px #000000;
   position: absolute;
   top: 15px;
   color: #383737af;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
+
 #twitterBtn{
   background-color: #1da1f2;
   color: white;
@@ -171,13 +169,191 @@ box-shadow: 5px 5px 15px 5px #000000;
   border-radius: 10px;
   text-decoration: none;
   padding: 5px;
- 
 }
 
 .buttons{
   width: 20%;
   display: flex;
   justify-content: space-around;
+}
+.note{
+  color: red;
+  margin-top: 20px;
+  font-size: 8px;
+}
+
+@media screen and (min-width:700px) and (max-width: 900px){
+  .app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(250, 235, 215, 0.295);
+  }
+  
+  .result {
+    width: 100%;
+    height: 66%;
+    position: relative;
+    font-size: 25px;
+    color: rgb(197, 167, 85);
+  }
+  
+  .insult {
+    width: 15%;
+    position: absolute;
+    text-align: center;
+    top: 38%;
+    left: 42.5%;
+    font-family: "Miroslav";
+    font-size: 20px;
+    font-weight: 400;
+    color: #c1b679;
+    letter-spacing: 1px;
+  }
+  
+  .input {
+    width: 50%;
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: "Miroslav"; 
+  }
+  
+  #root {
+    min-height: 600px;
+  }
+  
+  .name {
+    width: 60%;
+    outline-style: none;
+    border: none;
+    text-align: center;
+    border-bottom: 1px solid rgb(206, 194, 194);
+    height: 100%;
+    /* padding-left: 10px;
+    margin-right: 20px; */
+    box-shadow: 0 0.7em 1.5em -0.5em #a7801483;
+    background: transparent;
+    font-size: 20px;
+  } 
+  
+  button {
+    /* width: 3%;
+    margin-left: 5px;
+    border-radius: 50%;
+    background-color: red; */
+    /* display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white; */
+    /* background: #ad5389;
+    background: linear-gradient(0deg, rgba(212, 73, 63, 0.884) 0%, rgb(240, 143, 143) 100%); */
+    /* background: grey;
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #a78014b6;
+    letter-spacing: 0.05em; */
+    /* border-radius: 50%; */
+    /* cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 3%; */
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    background-color: #ededed;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #777777;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
+    width: 20%;
+    text-align: center;
+  }
+  
+  button:hover {
+    background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    background-color: #dfdfdf;
+  }
+  
+  button:active {
+    position: relative;
+    top: 1px;
+  }
+  
+  .radio-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-right: 20px;
+  }
+  
+  .radio {
+    background-color: rgba(255, 255, 255, 0.363);
+    margin-right: 10px;
+    border-radius: 10%;
+    height: 120%;
+  }
+  
+  img {
+    width: 20%;
+    height: 55%;
+    position: absolute;
+    left: 40%;
+    top: 8%;
+  }
+  
+  .openBook {
+    width: 45%;
+    height: 50%;
+    position: absolute;
+    left: 28%;
+    z-index: -2;
+    text-align: center;
+  }
+  
+  .bookFirstPage{
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
+  }
+  
+  #title{
+    position: absolute;
+    top: 15px;
+    color: #383737af;
+    font-size: 1.2em;
+  }
+
+  #twitterBtn{
+    background-color: #1da1f2;
+    color: white;
+    width: 60px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  .buttons{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 @media screen and (max-width:500px) {
@@ -218,8 +394,6 @@ box-shadow: 5px 5px 15px 5px #000000;
     flex-direction: column;
     align-items: center;
   }
-
-
 
   .name {
     width: 70%;
@@ -306,8 +480,6 @@ box-shadow: 5px 5px 15px 5px #000000;
     background-color: transparent;
   }
 
-
-
   label {
     text-align: right;
   }
@@ -317,7 +489,6 @@ box-shadow: 5px 5px 15px 5px #000000;
     background-color: transparent;
     height: 100%;
   }
-
 
   img {
     width: 70%;
@@ -343,7 +514,7 @@ box-shadow: 5px 5px 15px 5px #000000;
     left: 21%;
     width: 60%;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
   }
 
 .radio-btn{
@@ -361,10 +532,14 @@ margin-bottom: 20px;
   width: 30%;
   display: flex;
   justify-content: space-around;
- 
 }
 
 a{
   margin-left: 20px;
+}
+.note{
+  color: red;
+  margin-top: 20px;
+  font-size: 5px;
 }
 }
